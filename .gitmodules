@@ -1,0 +1,4 @@
+[submodule "vtella/hubble"]
+	path = vtella/hubble
+	url = git@github.com:vtella/hubble.git
+	branch = app-openeducat_erp
