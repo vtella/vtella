@@ -1,0 +1,9 @@
+update notes
+
+11.0.0.7==> added cron and user only update intrest once depend on his payment type and improve index.
+11.0.0.8 ==> Validation added when invoice validate.
+11.0.0.9 ==> improve index for validation added when invoice validate.
+11.0.0.10 ==> improve index , and change cron setting.
+11.0.0.11 ==> only those invoice interest check which was in draft and open state and paid invoice amount update.
+11.0.0.12 ==> update the cron method as after validation amount due is not calculating properly ,  we run cron 2nd time interest does not update.
+11.0.0.13 ==>We can no longer cancel an Invoice. We receive your validation error “Your payment term is monthly, and you can update it only once in a month” when we try.
