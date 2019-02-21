@@ -104,16 +104,9 @@ class account_invoice(models.Model):
 					'currency_id': diff_currency and inv.currency_id.id,
 					'invoice_id': inv.id
 				})
-			
-
-
 			date = date_invoice
 			# added for interest in iml
-			if date1 == false 
-				date1 =datetime.strptime(str(datetime.now().date()), '%Y-%m-%d')
-			else:
-				date1 = datetime.strptime(self.date_due, '%Y-%m-%d')
-				
+			date1 = datetime.strptime(self.date_due, '%Y-%m-%d')
 			date2 = datetime.strptime(str(datetime.now().date()), '%Y-%m-%d')   
 			if self.payment_term_id.id and date2 > date1:
 				iml.append({
@@ -325,7 +318,7 @@ class account_invoice(models.Model):
 			raise UserError(_("Invoice must be in draft or open state in order to be cancelled."))
 		payment_term = self.env['account.payment.term']
 		apt_type_record = payment_term.browse(self.payment_term_id.id)
-		pay_type = apt_type_reterest_type
+		pay_type = apt_type_record.interest_type
 		date1 = datetime.now().date()
 		date3 = date1.month
 
@@ -366,10 +359,7 @@ class account_invoice(models.Model):
 				# to_open_invoices.action_date_assign()
 				# to_open_invoices.action_move_create()
 				# return to_open_invoices.invoice_validate()
-	
-
-	
-    
+		
 		
 		
 		
